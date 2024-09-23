@@ -3,8 +3,8 @@ import {Route, Routes} from "react-router-dom";
 import Header from './components/Header.jsx';
 
 // all the pages
-const Homepage = lazy(()=>import("./pages/Homepage.jsx"))
-const Loginpage = lazy(()=>import("./pages/Loginpage.jsx"))
+const HomePage = lazy(()=>import("./pages/HomePage.jsx"))
+const Loginpage = lazy(()=>import("./pages/LoginPage.jsx"))
 const SignUpPage = lazy(()=>import("./pages/SignUpPage.jsx"))
 const Transactionpage = lazy(()=>import("./pages/Transactionpage.jsx"))
 const NotFoundPage = lazy(()=>import("./pages/NotFoundPage.jsx"))
@@ -15,7 +15,7 @@ const App = () => {
     <>
       {authUser && <Header/>}
     <Routes>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/' element={<HomePage/>}/>
       <Route path='/login' element={<Loginpage/>}/>
       <Route path='/signup' element={<SignUpPage/>}/>
       <Route path='/transaction/:id' element={<Transactionpage/>}/>
